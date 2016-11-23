@@ -1,0 +1,106 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AFLAGS	Makefile	/^AFLAGS := -Wall -c -g$/;"	m
+APPNAME	Makefile	/^APPNAME := goods_net $/;"	m
+CC	Makefile	/^CC := gcc$/;"	m
+ENV_MSG	list.h	/^typedef struct ENV_MSG{$/;"	s
+GOODS_NUM	shm.h	2;"	d
+LDFLAGS	Makefile	/^LDFLAGS := -lpthread$/;"	m
+OBJS	Makefile	/^OBJS := main.o $/;"	m
+SHM_PATHNAME	num.h	2;"	d
+SIZE_SHM	num.h	4;"	d
+STORAGE_GOODS_INFO	shm.h	/^typedef struct STORAGE_GOODS_INFO$/;"	s
+STORAGE_INFO	shm.h	/^typedef struct STORAGE_INFO$/;"	s
+STORAGE_NUM	shm.h	3;"	d
+UARTDATALEN	num.h	3;"	d
+ZIGBEE_NODE	num.h	1;"	d
+_UART_NODE	list.h	/^typedef struct _UART_NODE{$/;"	s
+adc	list.h	/^	unsigned int adc;$/;"	m	struct:ENV_MSG
+adc	shm.h	/^	float adc;$/;"	m	struct:STORAGE_INFO
+adcMIN	shm.h	/^	float adcMIN;$/;"	m	struct:STORAGE_INFO
+bat	list.h	/^	unsigned int bat;$/;"	m	struct:ENV_MSG
+battery	shm.h	/^	float battery;$/;"	m	struct:STORAGE_INFO
+buzzer_status	shm.h	/^	unsigned char buzzer_status;$/;"	m	struct:STORAGE_INFO
+cond_list	net_proj.c	/^pthread_cond_t cond_list;$/;"	v
+crc	shm.h	/^	short crc;$/;"	m	struct:data_all
+create_list_head	list.c	/^linklistp create_list_head(linklistp* tailp){$/;"	f
+data	list.h	/^	char data[UARTDATALEN];$/;"	m	struct:_UART_NODE
+data_all	shm.h	/^struct data_all$/;"	s
+dev_no	shm.h	/^	unsigned char dev_no;$/;"	m	struct:data_all
+env_info_clien_addr	shm.h	/^typedef struct env_info_clien_addr$/;"	s
+fan_status	shm.h	/^	unsigned char fan_status;$/;"	m	struct:STORAGE_INFO
+fetch_from_list_handler	pthread_fetch_from_list.c	/^void* fetch_from_list_handler(void* args){$/;"	f
+fflush_buf_to_shm	shm.c	/^int fflush_buf_to_shm(info* msg, char* buf, size_t size){$/;"	f
+goods_count	shm.h	/^	unsigned char goods_count;$/;"	m	struct:rfid_info
+goods_count	shm.h	/^	unsigned int goods_count;$/;"	m	struct:STORAGE_GOODS_INFO
+goods_info	shm.h	/^	storage_goods_info goods_info[GOODS_NUM];$/;"	m	struct:STORAGE_INFO
+goods_info	shm.h	/^	struct rfid_info goods_info;$/;"	m	struct:data_all	typeref:struct:data_all::rfid_info
+goods_no	shm.h	/^	unsigned char goods_no;$/;"	m	struct:rfid_info
+goods_type	shm.h	/^	unsigned char goods_type;$/;"	m	struct:STORAGE_GOODS_INFO
+head	list.h	/^	unsigned char head[3];$/;"	m	struct:ENV_MSG
+hp	list.c	/^linklistp hp,tp;$/;"	v
+hum	list.h	/^	unsigned char hum[2];$/;"	m	struct:ENV_MSG
+humidity	shm.h	/^	float humidity;$/;"	m	struct:STORAGE_INFO
+humidity	shm.h	/^	float humidity;$/;"	m	struct:data_all
+humidityMAX	shm.h	/^	float humidityMAX;$/;"	m	struct:STORAGE_INFO
+humidityMIN	shm.h	/^	float humidityMIN;$/;"	m	struct:STORAGE_INFO
+ifk_handler	pthread_fetch_from_list.c	/^void ifk_handler(int signum){$/;"	f
+illumination	shm.h	/^	float illumination;$/;"	m	struct:STORAGE_INFO
+illumination	shm.h	/^	float illumination;$/;"	m	struct:data_all
+illuminationMAX	shm.h	/^	float illuminationMAX;$/;"	m	struct:STORAGE_INFO
+illuminationMIN	shm.h	/^	float illuminationMIN;$/;"	m	struct:STORAGE_INFO
+info	shm.h	/^}info;$/;"	t	typeref:struct:env_info_clien_addr
+key_shm	net_proj.c	/^key_t key_shm;$/;"	v
+led_status	shm.h	/^	unsigned char led_status;$/;"	m	struct:STORAGE_INFO
+linklistp	list.h	/^}linknode,*linklistp;$/;"	t	typeref:struct:_UART_NODE
+linknode	list.h	/^}linknode,*linklistp;$/;"	t	typeref:struct:_UART_NODE
+list_cnt	list.c	/^int list_cnt;$/;"	v
+lux	list.h	/^	unsigned int lux;$/;"	m	struct:ENV_MSG
+main	main.c	/^int main(int argc, const char *argv[])$/;"	f
+main	test_main.c	/^int main(int argc, const char *argv[])$/;"	f
+main	test_printf_shm.c	/^int main(int argc, const char *argv[])$/;"	f
+msg_type	shm.h	/^	unsigned char msg_type;$/;"	m	struct:data_all
+mutex_list	net_proj.c	/^pthread_mutex_t mutex_list;$/;"	v
+mutex_uart	net_proj.c	/^pthread_mutex_t mutex_uart;$/;"	v
+next	list.h	/^	struct _UART_NODE* next;$/;"	m	struct:_UART_NODE	typeref:struct:_UART_NODE::_UART_NODE
+printf_env_info_clien_addr	test_printf_shm.c	/^void printf_env_info_clien_addr(info* msg){$/;"	f
+printf_envmsg	list.c	/^void printf_envmsg(char* recv_buf){$/;"	f
+printf_info_msg	shm.c	/^void printf_info_msg(info* msg){$/;"	f
+printf_list_long	list.c	/^bool printf_list_long(linklistp hp){$/;"	f
+read_from_list_head	list.c	/^bool read_from_list_head(linklistp hp,linklistp tailp,char* buf){$/;"	f
+recv_from_uart_handler	pthread_recv_from_uart.c	/^void* recv_from_uart_handler(void* args){$/;"	f
+rfid_info	shm.h	/^struct rfid_info$/;"	s
+rfid_type	shm.h	/^	unsigned char rfid_type;	$/;"	m	struct:rfid_info
+samplingTime	shm.h	/^	char samplingTime[20];$/;"	m	struct:STORAGE_INFO
+seg_status	shm.h	/^	unsigned char seg_status;$/;"	m	struct:STORAGE_INFO
+serial_init	pthread_recv_from_uart.c	/^void serial_init(int fd)$/;"	f
+shmaddr	shm.c	/^info* shmaddr;$/;"	v
+shmid	net_proj.c	/^int shmid;$/;"	v
+snum	list.h	/^	unsigned char snum;$/;"	m	struct:ENV_MSG
+storage_goods_info	shm.h	/^}storage_goods_info;$/;"	t	typeref:struct:STORAGE_GOODS_INFO
+storage_info	shm.h	/^}storage_info;$/;"	t	typeref:struct:STORAGE_INFO
+storage_no	shm.h	/^	storage_info storage_no[STORAGE_NUM];	$/;"	m	struct:env_info_clien_addr
+storage_status	shm.h	/^	unsigned char storage_status;				\/\/ 0:open 1:close$/;"	m	struct:STORAGE_INFO
+temp	list.h	/^	unsigned char temp[2];$/;"	m	struct:ENV_MSG
+temperature	shm.h	/^	float temperature;$/;"	m	struct:STORAGE_INFO
+temperature	shm.h	/^	float temperature;$/;"	m	struct:data_all
+temperatureMAX	shm.h	/^	float temperatureMAX;$/;"	m	struct:STORAGE_INFO
+temperatureMIN	shm.h	/^	float temperatureMIN;$/;"	m	struct:STORAGE_INFO
+thread_fetch	net_proj.c	/^pthread_t thread_fetch;$/;"	v
+thread_uart	net_proj.c	/^pthread_t thread_uart;$/;"	v
+tp	list.c	/^linklistp hp,tp;$/;"	v
+transfer_buf_to_msg	list.c	/^uart_msg* transfer_buf_to_msg(char* recv_buf){$/;"	f
+transfer_msg_to_buf	list.c	/^char* transfer_msg_to_buf(void){$/;"	f
+type	list.h	/^	unsigned char type;$/;"	m	struct:ENV_MSG
+uart_msg	list.h	/^}uart_msg;$/;"	t	typeref:struct:ENV_MSG
+write_to_list_tail	list.c	/^bool write_to_list_tail(linklistp* tailp,char* s){$/;"	f
+x	list.h	/^	unsigned char x;$/;"	m	struct:ENV_MSG
+x	shm.h	/^	signed char x;$/;"	m	struct:STORAGE_INFO
+y	list.h	/^	unsigned char y;$/;"	m	struct:ENV_MSG
+y	shm.h	/^	signed char y;$/;"	m	struct:STORAGE_INFO
+z	list.h	/^	unsigned char z;$/;"	m	struct:ENV_MSG
+z	shm.h	/^	signed char z;$/;"	m	struct:STORAGE_INFO

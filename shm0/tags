@@ -1,0 +1,94 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AFLAGS	Makefile	/^AFLAGS := -Wall -c -g$/;"	m
+APPNAME	Makefile	/^APPNAME := goods_net $/;"	m
+APPNAME_TEST	Makefile	/^APPNAME_TEST := get_shm$/;"	m
+CC	Makefile	/^CC := gcc$/;"	m
+EnvMsg	list.h	/^}EnvMsg;$/;"	v	typeref:struct:_EnvMsg
+GOODS_NUM	shm.h	1;"	d
+LDFLAGS	Makefile	/^LDFLAGS := -lpthread$/;"	m
+OBJS	Makefile	/^OBJS := main.o $/;"	m
+OBJS_TEST	Makefile	/^OBJS_TEST := test_printf_shm.o$/;"	m
+SHM_PATHNAME	net_proj.h	12;"	d
+SIZE_SHM	net_proj.h	13;"	d
+STORAGE_NUM	shm.h	2;"	d
+UARTDATALEN	list.h	3;"	d
+ZIGBEE_NODE	net_proj.h	11;"	d
+_EnvMsg	list.h	/^struct _EnvMsg{$/;"	s
+_UART_NODE	list.h	/^typedef struct _UART_NODE{$/;"	s
+adc	list.h	/^	unsigned int adc; 		\/\/电位器信息$/;"	m	struct:_EnvMsg
+adc	shm.h	/^	float adc;$/;"	m	struct:storage_info
+adcMIN	shm.h	/^	float adcMIN;$/;"	m	struct:storage_info
+battery	shm.h	/^	float battery;$/;"	m	struct:storage_info
+bet	list.h	/^	unsigned int bet;		\/\/电池电量$/;"	m	struct:_EnvMsg
+buzzer_status	shm.h	/^	unsigned char buzzer_status;$/;"	m	struct:storage_info
+cond_list	net_proj.c	/^pthread_cond_t cond_list;$/;"	v
+crc	shm.h	/^	short crc;$/;"	m	struct:data_all
+create_list_head	list.h	/^listnodep create_list_head(listnodep* tailp){$/;"	f
+data	list.h	/^	char data[UARTDATALEN];$/;"	m	struct:_UART_NODE
+data_all	shm.h	/^struct data_all$/;"	s
+dev_no	shm.h	/^	unsigned char dev_no;$/;"	m	struct:data_all
+env_info_clien_addr	shm.h	/^struct env_info_clien_addr$/;"	s
+fan_status	shm.h	/^	unsigned char fan_status;$/;"	m	struct:storage_info
+fetch_from_list_handler	pthread_fetch_from_list.c	/^void* fetch_from_list_handler(void* args){$/;"	f
+goods_count	shm.h	/^	unsigned char goods_count;$/;"	m	struct:rfid_info
+goods_count	shm.h	/^	unsigned int goods_count;$/;"	m	struct:storage_goods_info
+goods_info	shm.h	/^	struct rfid_info goods_info;$/;"	m	struct:data_all	typeref:struct:data_all::rfid_info
+goods_info	shm.h	/^	struct storage_goods_info goods_info[GOODS_NUM];$/;"	m	struct:storage_info	typeref:struct:storage_info::storage_goods_info
+goods_no	shm.h	/^	unsigned char goods_no;$/;"	m	struct:rfid_info
+goods_type	shm.h	/^	unsigned char goods_type;$/;"	m	struct:storage_goods_info
+head	list.h	/^	unsigned char head[3];	\/\/标识位st:$/;"	m	struct:_EnvMsg
+hum	list.h	/^	unsigned char hum[2];	\/\/湿度$/;"	m	struct:_EnvMsg
+humidity	shm.h	/^	float humidity;$/;"	m	struct:data_all
+humidity	shm.h	/^	float humidity;$/;"	m	struct:storage_info
+humidityMAX	shm.h	/^	float humidityMAX;$/;"	m	struct:storage_info
+humidityMIN	shm.h	/^	float humidityMIN;$/;"	m	struct:storage_info
+ifk_handler	pthread_fetch_from_list.c	/^void ifk_handler(int signum){$/;"	f
+illumination	shm.h	/^	float illumination;$/;"	m	struct:data_all
+illumination	shm.h	/^	float illumination;$/;"	m	struct:storage_info
+illuminationMAX	shm.h	/^	float illuminationMAX;$/;"	m	struct:storage_info
+illuminationMIN	shm.h	/^	float illuminationMIN;$/;"	m	struct:storage_info
+key_shm	net_proj.c	/^key_t key_shm;$/;"	v
+led_status	shm.h	/^	unsigned char led_status;$/;"	m	struct:storage_info
+listnode	list.h	/^}listnode,*listnodep;$/;"	t	typeref:struct:_UART_NODE
+listnodep	list.h	/^}listnode,*listnodep;$/;"	t	typeref:struct:_UART_NODE
+lux	list.h	/^	unsigned int lux;		\/\/光照$/;"	m	struct:_EnvMsg
+main	main.c	/^int main(int argc, const char *argv[])$/;"	f
+main	test_printf_shm.c	/^int main(int argc, const char *argv[])$/;"	f
+msg_type	shm.h	/^	unsigned char msg_type;$/;"	m	struct:data_all
+mutex_list	net_proj.c	/^pthread_mutex_t mutex_list;$/;"	v
+next	list.h	/^	struct _UART_NODE* next;$/;"	m	struct:_UART_NODE	typeref:struct:_UART_NODE::_UART_NODE
+printf_env_info_clien_addr	test_printf_shm.c	/^void printf_env_info_clien_addr(struct env_info_clien_addr* msg){$/;"	f
+read_from_list_head	list.h	/^bool read_from_list_head(listnodep hp,listnodep tailp,char** buf){$/;"	f
+recv_from_uart_handler	pthread_recv_from_uart.c	/^void* recv_from_uart_handler(void* args){$/;"	f
+rfid_info	shm.h	/^struct rfid_info$/;"	s
+rfid_type	shm.h	/^	unsigned char rfid_type;	$/;"	m	struct:rfid_info
+samplingTime	shm.h	/^	char samplingTime[20];$/;"	m	struct:storage_info
+seg_status	shm.h	/^	unsigned char seg_status;$/;"	m	struct:storage_info
+serial_init	pthread_recv_from_uart.c	/^void serial_init(int fd)$/;"	f
+shmaddr	net_proj.c	/^struct env_info_clien_addr* shmaddr;$/;"	v	typeref:struct:env_info_clien_addr
+shmid	net_proj.c	/^int shmid;$/;"	v
+snum	list.h	/^	unsigned char snum;			\/\/仓库编号$/;"	m	struct:_EnvMsg
+storage_goods_info	shm.h	/^struct storage_goods_info$/;"	s
+storage_info	shm.h	/^struct storage_info$/;"	s
+storage_no	shm.h	/^	struct storage_info storage_no[STORAGE_NUM];	$/;"	m	struct:env_info_clien_addr	typeref:struct:env_info_clien_addr::storage_info
+storage_status	shm.h	/^	unsigned char storage_status;				\/\/ 0:open 1:close$/;"	m	struct:storage_info
+temp	list.h	/^	unsigned char temp[2];	\/\/温度$/;"	m	struct:_EnvMsg
+temperature	shm.h	/^	float temperature;$/;"	m	struct:data_all
+temperature	shm.h	/^	float temperature;$/;"	m	struct:storage_info
+temperatureMAX	shm.h	/^	float temperatureMAX;$/;"	m	struct:storage_info
+temperatureMIN	shm.h	/^	float temperatureMIN;$/;"	m	struct:storage_info
+thread_fetch	net_proj.c	/^pthread_t thread_fetch;$/;"	v
+thread_uart	net_proj.c	/^pthread_t thread_uart;$/;"	v
+type	list.h	/^	unsigned char type;			\/\/数据类型$/;"	m	struct:_EnvMsg
+write_to_list_tail	list.h	/^bool write_to_list_tail(listnodep hp,listnodep* tailp,char* s){$/;"	f
+x	list.h	/^	unsigned char x;		\/\/三轴信息$/;"	m	struct:_EnvMsg
+x	shm.h	/^	signed char x;$/;"	m	struct:storage_info
+y	list.h	/^	unsigned char y;			 $/;"	m	struct:_EnvMsg
+y	shm.h	/^	signed char y;$/;"	m	struct:storage_info
+z	list.h	/^	unsigned char z;			 $/;"	m	struct:_EnvMsg
+z	shm.h	/^	signed char z;$/;"	m	struct:storage_info

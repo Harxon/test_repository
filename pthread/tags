@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AFLAGS	Makefile	/^AFLAGS := -Wall -c -g$/;"	m
+CC	Makefile	/^CC := gcc$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS := -lpthread$/;"	m
+ZIGBEE_NODE	net_proj.h	10;"	d
+cond_list	net_proj.c	/^pthread_cond_t cond_list;$/;"	v
+fetch_from_list_handler	pthread_fetch_from_list.c	/^void* fetch_from_list_handler(void* args){$/;"	f
+main	main.c	/^int main(int argc, const char *argv[])$/;"	f
+mutex_list	net_proj.c	/^pthread_mutex_t mutex_list;$/;"	v
+recv_from_uart_handler	pthread_recv_from_uart.c	/^void* recv_from_uart_handler(void* args){$/;"	f
+serial_init	pthread_recv_from_uart.c	/^void serial_init(int fd)$/;"	f
+thread_fetch	net_proj.c	/^pthread_t thread_fetch;$/;"	v
+thread_uart	net_proj.c	/^pthread_t thread_uart;$/;"	v
