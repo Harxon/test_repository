@@ -1,29 +1,31 @@
 #CC := gcc
 CC := arm-none-linux-gnueabi-gcc
-AFLAGS := -Wall -c -g
-LDFLAGS := -lpthread
+export AFLAGS := -Wall -c -g -I ../include/
+export LDFLAGS := -lpthread
 #应用程序1的名字
-APPNAME := storage_mamage
-CODES_DIR := src
-OBJS_STO_DIR := obj
+export APPNAME := storage_mamage
+CODES_DIR:=src main 
+export OBJS_STO_DIR:=obj
+export BIN_DIR:=bin
 
-#指定要生成的两个应用程序目标
-#'\c'可以实现echo的不换行,'@'加在命令前，在执行命令时，不显示被执行的命令本身
-ALLAPPS:CHANGE1 CHANGE2
-	@echo "appname>>  \c"
-	@ls $(APPNAME) 
-	@rm *.o 
-#	mv $(APPNAME) /source/rootfs 
 
-CHANGE2:
-	make -C $(OBJS_STO_DIR)
-	echo $(OBJS_STO_DIR)
 
-CHANGE1:
-	make -C $(CODES_DIR)
-	echo $(CODES_DIR)
+all:$(CODES_DIR) CHECK_DIR
+	@make -C $(OBJS_STO_DIR)
+	ls $(BIN_DIR)
+CHECK_DIR:
+	-@mkdir $(BIN_DIR)
+
+#自动化变量'$^'表示搜索到的所有依赖文件，'$@'为目标文件
+$(CODES_DIR):ECHO 
+	@make -C $@
+ECHO:
+	@echo $(CODES_DIR)
+#自动化变量'$<'表示搜索到的第一个依赖文件，'$@'为目标文件 
+#使用vpath来指定，当前目录中搜索不到相关类型文件后的搜索文件的目录
+#vpath %.c src
 
 
 .PHONY:clean
 clean:
-	rm -rf *.o $(APPNAME) a.out
+	rm -rf $(BIN_DIR) $(OBJS_STO_DIR)/*.o

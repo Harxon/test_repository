@@ -1,7 +1,6 @@
-OBJS := list.o
-OBJS += shm.o
-OBJS += sem.o
-OBJS += net_proj.o
+OBJS := pthread_recv_from_uart.o
+OBJS += pthread_fetch_from_list.o
+OBJS += main.o
 all:$(OBJS)
 $(OBJS):%.o:%.c
 	$(CC) $< -o $@ $(AFLAGS)
